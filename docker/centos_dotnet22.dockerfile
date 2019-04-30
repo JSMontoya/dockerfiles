@@ -15,7 +15,7 @@ RUN sudo yum -y update && \
     sudo yum -y install rh-dotnet22 && \
     sudo yum clean all && \
     ls /opt/rh/rh-dotnet22/root/usr/lib64/dotnet/sdk/ && \
-    sudo ln -s /opt/rh/rh-dotnet22/root/usr/lib64/dotnet/sdk/2.2.100/Sdks/Microsoft.NET.Sdk/tools/netcoreapp1.0 /opt/rh/rh-dotnet22/root/usr/lib64/dotnet/sdk/2.2.100/Sdks/Microsoft.NET.Sdk/tools/net46
+    sudo ln -s /opt/rh/rh-dotnet22/root/usr/lib64/dotnet/sdk/2.2.105/Sdks/Microsoft.NET.Sdk/tools/netcoreapp1.0 /opt/rh/rh-dotnet22/root/usr/lib64/dotnet/sdk/2.2.105/Sdks/Microsoft.NET.Sdk/tools/net46
 
 ENV PATH=/opt/rh/rh-dotnet22/root/usr/bin:/opt/rh/rh-dotnet22/root/usr/sbin${PATH:+:${PATH}}
 ENV CPATH=/opt/rh/rh-dotnet22/root/usr/include${CPATH:+:${CPATH}}
