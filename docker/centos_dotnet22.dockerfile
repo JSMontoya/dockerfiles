@@ -34,8 +34,8 @@ ENV LD_LIBRARY_PATH=/opt/rh/rh-nodejs8/root/usr/lib64${LD_LIBRARY_PATH:+:${LD_LI
 ENV PYTHONPATH=/opt/rh/rh-nodejs8/root/usr/lib/python2.7/site-packages${PYTHONPATH:+:${PYTHONPATH}}
 ENV MANPATH=/opt/rh/rh-nodejs8/root/usr/share/man:$MANPATH
 
-ARG OMNISHARP_CLIENT_VERSION=7.2.3
-ARG OMNISHARP_SERVER_VERSION=1.29.1
+ARG OMNISHARP_CLIENT_VERSION=7.1.3
+ARG OMNISHARP_SERVER_VERSION=1.23.1
 RUN mkdir -p ${HOME}/che/ls-csharp && \
    cd ${HOME}/che/ls-csharp && \
    npm install omnisharp-client@${OMNISHARP_CLIENT_VERSION} && \
