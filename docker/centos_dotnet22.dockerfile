@@ -26,13 +26,13 @@ ENV PYTHONPATH=/opt/rh/rh-dotnet22/root${PYTHONPATH:+:${PYTHONPATH}}
 ENV XDG_DATA_DIRS=/opt/rh/rh-dotnet22/root/usr/share:${XDG_DATA_DIRS:-/usr/local/share:/usr/share}
 ENV DOTNET_CLI_TELEMETRY_OPTOUT=true
 
-RUN sudo yum -y install rh-nodejs8 && \
+RUN sudo yum -y install rh-nodejs6 && \
     sudo yum clean all && \
-    sudo ln -s /opt/rh/rh-nodejs8/root/usr/bin/node /usr/local/bin/nodejs 
-ENV PATH=/opt/rh/rh-nodejs8/root/usr/bin${PATH:+:${PATH}}
-ENV LD_LIBRARY_PATH=/opt/rh/rh-nodejs8/root/usr/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
-ENV PYTHONPATH=/opt/rh/rh-nodejs8/root/usr/lib/python2.7/site-packages${PYTHONPATH:+:${PYTHONPATH}}
-ENV MANPATH=/opt/rh/rh-nodejs8/root/usr/share/man:$MANPATH
+    sudo ln -s /opt/rh/rh-nodejs6/root/usr/bin/node /usr/local/bin/nodejs 
+ENV PATH=/opt/rh/rh-nodejs6/root/usr/bin${PATH:+:${PATH}}
+ENV LD_LIBRARY_PATH=/opt/rh/rh-nodejs6/root/usr/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+ENV PYTHONPATH=/opt/rh/rh-nodejs6/root/usr/lib/python2.7/site-packages${PYTHONPATH:+:${PYTHONPATH}}
+ENV MANPATH=/opt/rh/rh-nodejs6/root/usr/share/man:$MANPATH
 
 ARG OMNISHARP_CLIENT_VERSION=7.1.3
 ARG OMNISHARP_SERVER_VERSION=1.23.1
